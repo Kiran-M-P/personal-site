@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0f0f0f;
+  --surface: #1a1a1a;
+  --muted: #2d2d2d;
+  --text-primary: #e0e0e0;
+  --text-muted: #8a8a8a;
+  --accent: #6b6b6b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+  font-size: 14px;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+    line-height: 1.5rem;
+  }
+}
+
+/* Terminal-style section separator */
+.section-divider {
+  @apply border-t border-muted/60 my-16;
+}
+
+/* Subtle link hover */
+a:hover {
+  @apply text-accent transition-colors;
+}
+
+/* Blog post content - terminal-themed prose */
+.prose-invert {
+  --tw-prose-body: #8a8a8a;
+  --tw-prose-headings: #e0e0e0;
+  --tw-prose-links: #6b6b6b;
+  --tw-prose-code: #e0e0e0;
+  --tw-prose-pre-bg: #1a1a1a;
+  --tw-prose-pre-border: #2d2d2d;
+}
