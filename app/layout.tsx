@@ -12,7 +12,7 @@ const firaMono = Fira_Mono({
 
 export const metadata: Metadata = {
   title: "Kiran | Software Engineer",
-  description: "Personal site documenting learnings and thoughts through blog posts.",
+  description: "Notes, learnings, and reflections from my journey as a software engineer.",
   icons: {
     icon: [
       { url: "/favicon.png", type: "image/png", sizes: "any" },
