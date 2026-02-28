@@ -13,6 +13,12 @@ const firaMono = Fira_Mono({
 export const metadata: Metadata = {
   title: "Kiran | Software Engineer",
   description: "Personal site documenting learnings and thoughts through blog posts.",
+  icons: {
+    icon: [
+      { url: "/favicon.png", type: "image/png", sizes: "any" },
+      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+    ],
+  },
 };
 
 export default function RootLayout({

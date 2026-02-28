@@ -10,12 +10,26 @@ interface BlogSectionProps {
 }
 
 export default function BlogSection({ posts, allTags }: BlogSectionProps) {
-  const [selectedTag, setSelectedTag] = useState<string | null>(null);
+  const [selectedTags, setSelectedTags] = useState<Set<string>>(new Set());
+
+  const toggleTag = (tag: string) => {
+    setSelectedTags((prev) => {
+      const next = new Set(prev);
+      if (next.has(tag)) {
+        next.delete(tag);
+      } else {
+        next.add(tag);
+      }
+      return next;
+    });
+  };
 
   const filteredPosts =
-    selectedTag === null
+    selectedTags.size === 0
       ? posts
-      : posts.filter((p) => p.tags.includes(selectedTag));
+      : posts.filter((p) =>
+          [...selectedTags].every((tag) => p.tags.includes(tag))
+        );
 
   return (
     <section id="blogs" className="py-16 scroll-mt-20">
@@ -24,15 +38,15 @@ export default function BlogSection({ posts, allTags }: BlogSectionProps) {
           // knowledge base
         </h2>
         <p className="text-text-muted text-sm mb-6">
-          A collection of technical explorations, architectural decisions, and learnings from the field. Filter by tags to find relevant topics.
+        A collection of technical explorations, engineering blog summaries, and my learnings from the field. Filter by tags to find relevant topics.
         </p>
 
         {allTags.length > 0 && (
           <div className="flex flex-wrap gap-2 mb-8">
             <button
-              onClick={() => setSelectedTag(null)}
+              onClick={() => setSelectedTags(new Set())}
               className={`px-3 py-1.5 text-sm rounded border transition-colors ${
-                selectedTag === null
+                selectedTags.size === 0
                   ? "border-accent bg-muted/30 text-text-primary"
                   : "border-muted text-text-muted hover:text-text-primary hover:border-accent/50"
               }`}
@@ -42,9 +56,9 @@ export default function BlogSection({ posts, allTags }: BlogSectionProps) {
             {allTags.map((tag) => (
               <button
                 key={tag}
-                onClick={() => setSelectedTag(tag)}
+                onClick={() => toggleTag(tag)}
                 className={`px-3 py-1.5 text-sm rounded border transition-colors ${
-                  selectedTag === tag
+                  selectedTags.has(tag)
                     ? "border-accent bg-muted/30 text-text-primary"
                     : "border-muted text-text-muted hover:text-text-primary hover:border-accent/50"
                 }`}

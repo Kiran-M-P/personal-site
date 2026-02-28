@@ -1,0 +1,1 @@
+Place images in `public/blog/[post-slug]/` and reference them in Markdown:

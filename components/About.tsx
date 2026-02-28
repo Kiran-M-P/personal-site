@@ -2,9 +2,9 @@ const skills = [
   "Java",
   "Spring Boot",
   "MySQL",
-  "REST APIs",
+  "Kafka",
   "Microservices",
-  "Git",
+  "System Design",
 ];
 
 export default function About() {
@@ -13,11 +13,15 @@ export default function About() {
       <div className="max-w-[720px] mx-auto px-6">
         <h2 className="text-lg font-medium text-text-muted mb-4">// about</h2>
         <p className="text-text-primary mb-4 leading-relaxed">
-          I build backend systems and APIs, focusing on clean architecture and scalable solutions. 
-          My experience spans microservices, database design, and building reliable services that power production applications.
+        I’m a backend engineer with 3.7 years of experience building systems and APIs.
+         Over the last few years, I’ve worked on real-world systems handling thousands of requests and integrations, where things don’t always go as planned (and that’s where most of the learning happens).
+        </p>
+        <p className="text-text-primary mb-4 leading-relaxed">
+        From reducing failure rates to chasing down production issues, I’ve spent a lot of time understanding how systems behave outside ideal conditions. I think in terms of trade-offs, not just what works, 
+        but what continues to work as systems scale. 
         </p>
         <p className="text-text-primary mb-6 leading-relaxed">
-          This site is where I document what I learn and think. Filter by tags to find topics that interest you.
+        Coffee fuels my day.
         </p>
         <div className="flex flex-wrap gap-2">
           {skills.map((skill) => (
