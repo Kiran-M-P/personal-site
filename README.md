@@ -38,6 +38,14 @@ excerpt: "Short description for the blog list."
 
 4. Build or run dev—the post will appear in the Blogs section and at `/blog/my-new-post`.
 
+### Including Images
+
+Place images in `public/blog/[post-slug]/` and reference them in Markdown:
+
+```markdown
+![Snowflake diagram](/blog/twitter-snowflake-id/diagram.png)
+```
+
 ### Frontmatter Fields
 
 | Field    | Required | Description                    |

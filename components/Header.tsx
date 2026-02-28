@@ -1,9 +1,9 @@
 "use client";
 
 const navLinks = [
-  { href: "#about", label: "about" },
-  { href: "#contact", label: "contact" },
-  { href: "#blogs", label: "blogs" },
+  { href: "/#about", label: "about" },
+  { href: "/#contact", label: "contact" },
+  { href: "/#blogs", label: "blogs" },
 ];
 
 export default function Header() {

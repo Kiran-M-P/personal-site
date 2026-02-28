@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import ReactMarkdown from "react-markdown";
 import { getPostBySlug, getAllPosts } from "@/lib/posts";
+import SnowflakeDiagram from "@/components/SnowflakeDiagram";
 
 function formatDate(dateStr: string): string {
   if (!dateStr) return "";
@@ -34,6 +35,15 @@ export default async function BlogPostPage({ params }: PageProps) {
     notFound();
   }
 
+  const DIAGRAM_MARKER = "<!-- DIAGRAM -->";
+  const hasDiagram = slug === "twitter-snowflake-id" && post.content.includes(DIAGRAM_MARKER);
+  const [contentBeforeDiagram, contentAfterDiagram] = hasDiagram
+    ? post.content.split(DIAGRAM_MARKER)
+    : [post.content, ""];
+
+  const proseClass =
+    "prose prose-invert prose-sm max-w-none [&_pre]:my-8 [&_pre]:bg-surface [&_pre]:border [&_pre]:border-muted [&_pre]:rounded [&_pre]:p-4 [&_pre]:overflow-x-auto [&_a]:text-accent [&_a:hover]:text-text-primary [&_code]:bg-surface [&_code]:px-1.5 [&_code]:py-0.5 [&_code]:rounded [&_code]:text-sm";
+
   return (
     <article className="max-w-[720px] mx-auto px-6 py-16">
       <Link
@@ -56,9 +66,25 @@ export default async function BlogPostPage({ params }: PageProps) {
         {post.title}
       </h1>
       <p className="text-text-muted text-sm mb-8">{formatDate(post.date)}</p>
-      <div className="prose prose-invert prose-sm max-w-none [&_pre]:bg-surface [&_pre]:border [&_pre]:border-muted [&_pre]:rounded [&_pre]:p-4 [&_pre]:overflow-x-auto [&_a]:text-accent [&_a:hover]:text-text-primary [&_code]:bg-surface [&_code]:px-1.5 [&_code]:py-0.5 [&_code]:rounded [&_code]:text-sm">
-        <ReactMarkdown>{post.content}</ReactMarkdown>
-      </div>
+      {hasDiagram ? (
+        <>
+          <div className={proseClass}>
+            <ReactMarkdown>{contentBeforeDiagram}</ReactMarkdown>
+          </div>
+          <div className="my-12">
+            <SnowflakeDiagram />
+          </div>
+          {contentAfterDiagram ? (
+            <div className={proseClass}>
+              <ReactMarkdown>{contentAfterDiagram}</ReactMarkdown>
+            </div>
+          ) : null}
+        </>
+      ) : (
+        <div className={proseClass}>
+          <ReactMarkdown>{post.content}</ReactMarkdown>
+        </div>
+      )}
     </article>
   );
 }
