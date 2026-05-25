@@ -41,7 +41,7 @@ a:hover {
 
 /* Blog post content - terminal-themed prose */
 .prose-invert {
-  --tw-prose-body: #8a8a8a;
+  --tw-prose-body: #e0e0e0;
   --tw-prose-headings: #e0e0e0;
   --tw-prose-links: #6b6b6b;
   --tw-prose-code: #e0e0e0;

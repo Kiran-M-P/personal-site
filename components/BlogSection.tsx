@@ -28,7 +28,7 @@ export default function BlogSection({ posts, allTags }: BlogSectionProps) {
     selectedTags.size === 0
       ? posts
       : posts.filter((p) =>
-          [...selectedTags].every((tag) => p.tags.includes(tag))
+          [...selectedTags].some((tag) => p.tags.includes(tag))
         );
 
   return (

@@ -1,5 +1,5 @@
 ---
-title: "My First Switch to SDE 2"
+title: "Cracking SDE 2 Interviews : My Experience"
 date: 2026-05-26
 tags: [career, interviews, sde-2]
 excerpt: "A mix of how-to steps and personal learnings for switching to an SDE 2 role—resume, prep, interviews, and lessons from 300+ applications."
@@ -75,17 +75,9 @@ I used Jake's resume template. It's simple and recommended by many engineers.
 
 #### Resume Resources
 
-**Jake's LaTeX Resume Template**
-
-[Overleaf - Jake's Resume Template](https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs)
-
-**LaTeX Online Editor**
-
-[Overleaf](https://www.overleaf.com/)
-
-**Alternate DOCX Resume Template**
-
-[Resume Template GitHub Repo](https://github.com/mattyHerzig/resume)
+* [Jake's LaTeX Resume Template](https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs)
+* [Overleaf - LaTeX Online Editor](https://www.overleaf.com/)
+* [Alternate DOCX Resume Template](https://github.com/mattyHerzig/resume)
 
 Maintain multiple resume versions and keep experimenting. I mostly used file naming for version control.
 
@@ -142,9 +134,8 @@ Start with the brute-force approach and gradually optimize toward a better solut
 
 #### DSA Resources
 
-**Take U Forward — Striver's SDE Sheet**
-
-[Take U Forward DSA Sheet](https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems)
+* [Take U Forward DSA Sheet](https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems)
+* [AlgoMonster Problem Pattern Stats](https://algo.monster/problems/stats)
 
 #### Some observations from my interview experiences
 
@@ -155,10 +146,6 @@ Start with the brute-force approach and gradually optimize toward a better solut
 * Pick one concept or algorithm and practice multiple variations of problems around it.
 
 Maintain a sheet of problems you struggled with and revisit them after 1–2 weeks if you still can't solve them without checking the answer. Repetition helps a lot.
-
-#### DSA Pattern Weightage
-
-[AlgoMonster Problem Pattern Stats](https://algo.monster/problems/stats)
 
 ---
 
@@ -191,13 +178,8 @@ Here, I'm mainly talking about LLD interviews.
 
 #### LLD Resources
 
-**Hello Interview — LLD Guide**
-
-[Hello Interview LLD Guide](https://www.hellointerview.com/learn/low-level-design/in-a-hurry/introduction)
-
-**Awesome Low-Level Design GitHub Repo**
-
-[Awesome LLD GitHub Repo](https://github.com/ashishps1/awesome-low-level-design)
+* [Hello Interview — LLD Guide](https://www.hellointerview.com/learn/low-level-design/in-a-hurry/introduction)
+* [Awesome Low-Level Design GitHub Repo](https://github.com/ashishps1/awesome-low-level-design)
 
 Practice standard LLD problems like:
 
@@ -215,9 +197,7 @@ Again, time management matters a lot here. Some interviewers expect runnable cod
 
 #### Resource
 
-**Hello Interview — System Design Guide**
-
-[Hello Interview System Design Guide](https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction)
+* [Hello Interview System Design Guide](https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction)
 
 Practice mock system design interviews using:
 
@@ -273,9 +253,8 @@ to understand compensation ranges.
   * interview rounds
   * expectations
   * interview format
-* Practice previously asked questions for the company you are interviewing with.
 
-LeetCode discussion sections and interview experience posts are very useful because many question patterns repeat.
+* Practice previously asked questions for the company you are interviewing with. LeetCode discussion sections and interview experience posts are very useful because many question patterns repeat.
 
 * I would suggest starting with DSA first and moving to other rounds once you reach around 60–70% confidence in DSA. In most companies, DSA is still the knockout round.
 
