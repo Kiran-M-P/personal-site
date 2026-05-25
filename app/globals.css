@@ -41,10 +41,16 @@ a:hover {
 
 /* Blog post content - terminal-themed prose */
 .prose-invert {
-  --tw-prose-body: #8a8a8a;
+  --tw-prose-body: #e0e0e0;
   --tw-prose-headings: #e0e0e0;
   --tw-prose-links: #6b6b6b;
   --tw-prose-code: #e0e0e0;
   --tw-prose-pre-bg: #1a1a1a;
   --tw-prose-pre-border: #2d2d2d;
+  --tw-prose-quotes: #8a8a8a;
+  --tw-prose-quote-borders: #6b6b6b;
+  --tw-prose-hr: #2d2d2d;
+  --tw-prose-bullets: #6b6b6b;
+  --tw-prose-counters: #6b6b6b;
+  --tw-prose-bold: #e0e0e0;
 }
