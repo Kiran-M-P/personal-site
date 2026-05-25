@@ -47,4 +47,10 @@ a:hover {
   --tw-prose-code: #e0e0e0;
   --tw-prose-pre-bg: #1a1a1a;
   --tw-prose-pre-border: #2d2d2d;
+  --tw-prose-quotes: #8a8a8a;
+  --tw-prose-quote-borders: #6b6b6b;
+  --tw-prose-hr: #2d2d2d;
+  --tw-prose-bullets: #6b6b6b;
+  --tw-prose-counters: #6b6b6b;
+  --tw-prose-bold: #e0e0e0;
 }
