@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fira_Mono } from "next/font/google";
 import Header from "@/components/Header";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const firaMono = Fira_Mono({
@@ -31,6 +32,7 @@ export default function RootLayout({
       <body className="font-mono antialiased min-h-screen">
         <Header />
         {children}
+        <Analytics />
       </body>
     </html>
   );
